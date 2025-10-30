@@ -1,0 +1,573 @@
+<!DOCTYPE html>    
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pórtate bien! - Mvrk</title>
+
+    <meta name="description" content="Portate bien! en tour. Fechas, ciudades y entradas disponibles. ¡No te lo pierdas!" />
+    <meta name="keywords" content="Tour Mvrk 2025, Pórtate Bien, entradas Mvrk, conciertos Mvrk, música urbana, mvrk, musica" />
+    <meta name="author" content="Mvrk Oficial" />
+    <link rel="canonical" href="https://www.mvrk.es/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mvrk.es/" />
+    <meta property="og:title" content="Pórtate bien! – Mvrk" />
+    <meta property="og:description" content="Descubre las fechas del Tour 'Pórtate Bien' de Mvrk en España. Consigue ya tu entrada." />
+    <meta property="og:image" content="https://mvrk.es/src/img/lettering.webp" />
+
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"MusicEvent",
+        "name":"Pórtate Bien – Tour Mvrk",
+        "startDate":"2025-03-15",
+        "location":{"@type":"Place","name":"Varias ciudades de España","address":{"@type":"PostalAddress","addressCountry":"ES"}},
+        "image":"https://mvrk.es/src/img/lettering.webp",
+        "description":"Descubre las fechas y compra tus entradas para el Tour 'Pórtate Bien' de Mvrk.",
+        "url":"https://www.mvrk.es/",
+        "eventStatus":"https://schema.org/EventScheduled"
+      }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYYF70RJXZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-QYYF70RJXZ");
+    </script>
+
+    <noscript></noscript>
+    <link rel="icon" href="/assets/logo-C-sEIKdg.webp" />
+    <script type="module" crossorigin src="/assets/index-BmKyA6-Z.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DfRjPs9F.css">
+
+    <!-- AJUSTES VISUALES -->
+  
+
+    <!-- WIGGLE lettering continuo -->
+    <style>
+      @keyframes mvrk-wiggle-img {
+        0%   { transform: translate3d(0,0,0) rotate(0deg); }
+        10%  { transform: translate3d(6px,-4px,0) rotate(1.0deg); }
+        20%  { transform: translate3d(-5px,5px,0) rotate(-0.9deg); }
+        30%  { transform: translate3d(4px,3px,0) rotate(0.8deg); }
+        40%  { transform: translate3d(-4px,-3px,0) rotate(-0.7deg); }
+        50%  { transform: translate3d(3px,1px,0) rotate(0.5deg); }
+        60%  { transform: translate3d(-3px,-1px,0) rotate(-0.4deg); }
+        70%  { transform: translate3d(2px,2px,0) rotate(0.3deg); }
+        80%  { transform: translate3d(-2px,-2px,0) rotate(-0.2deg); }
+        100% { transform: translate3d(0,0,0) rotate(0deg); }
+      }
+      .intro .lettering img{
+        --wiggle-offset:-1.7s;
+        animation:mvrk-wiggle-img 3.4s linear infinite both !important;
+        animation-delay:var(--wiggle-offset) !important;
+        animation-play-state:running !important;
+        transform-origin:50% 50%;
+        will-change:transform;
+        backface-visibility:hidden;
+        transform:translateZ(0);
+      }
+      @media (prefers-reduced-motion: reduce){
+        .intro .lettering img{ animation:none !important; }
+      }
+    </style>
+
+    <!-- iPod MINI (foto) top-right — pantalla de VÍDEO + sombra dura vertical -->
+    <style>
+      :root{
+        --ipod-mini-width: 140px;   /* tamaño del iPod */
+        --screen-left: 12%;
+        --screen-top: 8%;
+        --screen-w: 76%;
+        --screen-h: 28%;
+        --wheel-top: 74%;
+        --wheel-size: 56%;
+      }
+      .ipod-photo{
+        position: fixed; top: 12px; right: 12px; z-index: 9999;
+        width: var(--ipod-mini-width);
+        aspect-ratio: 0.436; /* proporción de /assets/ipod.png */
+        background: url('/assets/ipod.png') center/cover no-repeat;
+        pointer-events: none;
+        border-radius: 18px;
+
+        -webkit-filter:
+          drop-shadow(0 20px 6px rgba(0,0,0,.65))
+          drop-shadow(0 34px 18px rgba(0,0,0,.35));
+                filter:
+          drop-shadow(0 20px 6px rgba(0,0,0,.65))
+          drop-shadow(0 34px 18px rgba(0,0,0,.35));
+      }
+      .ipod-photo .overlay{ position:absolute; inset:0; pointer-events:auto; color:#eee; font:600 11px/1.2 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+
+      /* Pantalla = vídeo en el hueco */
+      .ipod-screen{
+        position:absolute; left:var(--screen-left); top:var(--screen-top);
+        width:var(--screen-w); height:var(--screen-h);
+        display:grid; grid-template-rows: 1fr auto; gap:4px;
+        border-radius:4px; overflow:hidden; background:rgba(0,0,0,.05); padding:4px;
+      }
+      .ipod-title{ font-weight:700; font-size:10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+      .ipod-artist{ font-size:10px; color:#bdbdbd; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+      /* Rueda: hotzones invisibles sobre los iconos REALES de la foto */
+      .ipod-wheel{
+        position:absolute; left:50%; top:var(--wheel-top); transform:translate(-50%,-50%);
+        width:var(--wheel-size); aspect-ratio:1; border-radius:50%; touch-action:none;
+      }
+      .ipod-hotzone{
+        position:absolute; border:none; padding:0; background:transparent; cursor:pointer;
+        width:30%; aspect-ratio:1; border-radius:50%; transform:translate(-50%,-50%);
+        transition: transform .12s ease, filter .12s ease;
+      }
+      .ipod-hotzone.prev{ left:16%; top:50%; }   /* ⟨⟨ */
+      .ipod-hotzone.next{ left:84%; top:50%; }   /* ⟩⟩ */
+      .ipod-hotzone.play{ left:50%; top:88%; width:24%; aspect-ratio:1; border-radius:50%; transform:translate(-50%,-50%); }
+
+      .ipod-hotzone:focus-visible{ outline:none; box-shadow:0 0 0 2px rgba(255,255,255,.18) inset; }
+      .ipod-hotzone:active{ box-shadow:0 0 0 3px rgba(255,255,255,.22) inset; }
+    </style>
+
+    <!-- Desktop: botones reactivos + bajar/agrandar Play/Pause + iPod atenuado -->
+    <style>
+      @media (min-width:769px) and (hover:hover) and (pointer:fine){
+        .ipod-hotzone.is-pressing{ transform: translate(-50%,-50%) scale(.96); filter: brightness(.92); }
+        .ipod-hotzone::after{
+          content:"";
+          position:absolute; inset:-14%;
+          border-radius:50%;
+          pointer-events:none;
+          background:
+            radial-gradient(closest-side, rgba(255,255,255,.22), rgba(255,255,255,0) 70%),
+            radial-gradient(closest-side, rgba(0,0,0,.18), rgba(0,0,0,0) 75%);
+          opacity:0; transform:scale(.85);
+          transition: opacity .12s ease, transform .12s ease;
+        }
+        .ipod-hotzone.is-pressing::after{ opacity:1; transform:scale(1); }
+        @keyframes ipod-pop {
+          0%{   transform: translate(-50%,-50%) scale(.96); }
+          60%{  transform: translate(-50%,-50%) scale(1.015); }
+          100%{ transform: translate(-50%,-50%) scale(1); }
+        }
+        .ipod-hotzone.pop { animation: ipod-pop .18s cubic-bezier(.2,.8,.2,1); }
+
+        .ipod-hotzone.play{ top:90%; width:28%; }
+
+        .ipod-photo{
+          opacity:.45;
+          transform:scale(.82);
+          transform-origin:top right;
+          transition: opacity .18s ease, transform .22s cubic-bezier(.2,.8,.2,1);
+          will-change: transform, opacity;
+        }
+        .ipod-photo:has(.overlay:hover),
+        .ipod-photo:has(.overlay:focus-within){
+          opacity:1;
+          transform:scale(1);
+        }
+      }
+
+      /* Solo ESCRITORIO: ajustar Málaga en la columna derecha (sin tocar lo demás) */
+      @media (min-width:769px){
+        .city-row.right a.city:has(img[alt="Malaga"]),
+        .city-row.right a.city:has(img[alt="Málaga"]){
+          width: 500px;
+          margin-left: auto;
+          margin-right: 0;
+        }
+        .city-row.right a.city:has(img[alt="Malaga"]) img,
+        .city-row.right a.city:has(img[alt="Málaga"]) img{
+          width:100%; height:auto; object-fit:contain;
+        }
+      }
+    </style>
+
+
+
+
+
+    <!-- OVERRIDE: pantalla del iPod con la MISMA relación que el vídeo -->
+    <style>
+      .ipod-screen{
+        display:block !important;
+        padding:0 !important;
+        height:auto !important;
+        aspect-ratio: 4 / 3;   /* JS lo ajusta al real del clip */
+        overflow:hidden;
+        border-radius:4px;
+        background:#000 !important;
+      }
+      .ipod-screen > div{
+        position:absolute; left:6px; right:6px; top:6px;
+        pointer-events:none;
+      }
+      #ipodVideo{ width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+    </style>
+
+    <!-- iPod en móvil: oculto completamente -->
+    <style>
+      @media (max-width:768px){
+        .ipod-photo{ display:none !important; }
+      }
+
+    </style>
+    
+  </head>
+  <body>
+    <!-- FONDO -->
+    <canvas id="scroll-canvas"></canvas>
+
+    <!-- INTRO -->
+    <div class="intro">
+      <div class="lettering">
+        <img src="/assets/lettering-Bp-zbET-.webp" alt="lettering portate bien" />
+      </div>
+    </div>
+    <div class="scroll-arrow">
+      <img src="/assets/flecha-swwuFQuF.png" alt="Haz scroll" />
+    </div>
+
+    <!-- CIUDADES -->
+    <section class="content">
+      <div class="city-row left">
+        <a href="https://inverfest.com/events/mvrk/" target="_blank" class="city">
+          <img decoding="async" src="/assets/madrid-CLf_BILj.webp" alt="Madrid" />
+        </a>
+        <img src="/assets/ampliacion-DnXx2_Px.png" alt="Ampliacion grada" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://entradas.crashmusic.es/event/concierto-mvrk-granada-sala-tren-viernes-10-de-octubre" target="_blank" class="city">
+          <img decoding="async" src="/assets/granada-ClCkFhFL.webp" alt="Granada" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://www.fourvenues.com/rollercoaster/1LIV" target="_blank" class="city">
+          <img decoding="async" src="/assets/sevilla-Bu5lx9vZ.webp" alt="Sevilla" />
+        </a>
+      </div>
+
+      <div class="city-row right">
+        <a href="https://www.bringthenoise.events/evento/mvrk-a-coruna-2025/" target="_blank" class="city">
+          <img decoding="async" src="/assets/coru%C3%B1aa-DWwH3-UY.png" alt="A Coruña" />
+        </a>
+        <img src="/assets/last-BK9Fd12e.png" alt="Ultimos tickets" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://www.bringthenoise.events/evento/mvrk-vigo-2025/" target="_blank" class="city">
+          <img decoding="async" src="/assets/vigo-BYEQnBWs.webp" alt="Vigo" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://www.ticketmaster.es/event/706838424" target="_blank" class="city">
+          <img decoding="async" src="/assets/mallorca-CZakrPjO.webp" alt="Mallorca" />
+        </a>
+        <img src="/assets/last-BK9Fd12e.png" alt="Ultimos tickets" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://link.dice.fm/bacd4f52de2e" target="_blank" class="city">
+          <img decoding="async" src="/assets/valenciaNuevo-DwL26wBI.png" alt="Valencia" />
+        </a>
+        <img src="/assets/new-brUqw31y.png" alt="Nueva fecha" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://link.dice.fm/M8ba31cf71df" target="_blank" class="city">
+          <img decoding="async" src="/assets/valencia-BUT6DA15.webp" alt="Valencia" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://www.fourvenues.com/grupo-13-14/VBYX" target="_blank" class="city">
+          <img decoding="async" src="/assets/alicante-CAMmxk_P.webp" alt="Alicante" />
+        </a>
+        <img src="/assets/last-BK9Fd12e.png" alt="Ultimos tickets" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://feverup.com/m/316826" target="_blank" class="city">
+          <img decoding="async" src="/assets/zaragoza-qTonD5s9.webp" alt="Zaragoza" />
+        </a>
+        <img src="/assets/last-BK9Fd12e.png" alt="Ultimos tickets" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://feverup.com/m/316838" target="_blank" class="city">
+          <img decoding="async" src="/assets/bilbao-D-nc6HDZ.webp" alt="Bilbao" />
+        </a>
+      </div>
+
+      <div class="city-row right">
+        <a href="https://www.ticketmaster.es/event/1284323430" target="_blank" class="city">
+          <img decoding="async" src="/assets/tenerife-CZ7ASYM_.webp" alt="Tenerife" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://www.enterticket.es/eventos/mvrk-444523" target="_blank" class="city">
+          <img decoding="async" src="/assets/murciaa-BOC7caeV.png" alt="Murcia" />
+        </a>
+      </div>
+
+      <div class="city-row right">
+        <a href="https://entradas.crashmusic.es/event/concierto-mvrk-malaga-sala-paris-15-sabado-10-de-enero" target="_blank" class="city">
+          <img decoding="async" src="/assets/malagaa-Bfp3hSkZ.png" alt="Malaga" />
+        </a>
+      </div>
+
+      <div class="city-row left">
+        <a href="https://www.ticketmaster.es/event/1022992046?brand=base_mb_es" target="_blank" class="city">
+          <img decoding="async" src="/assets/gijonNuevo-DMJ9e1Bm.png" alt="Gijon" />
+        </a>
+        <img src="/assets/new-brUqw31y.png" alt="Nueva fecha" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://www.ticketmaster.es/event/478619055?brand=base_mb_es" target="_blank" class="city">
+          <img decoding="async" src="/assets/gijonn-BR7qPiq3.png" alt="Gijon" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+
+      <div class="city-row left">
+        <a href="https://link.dice.fm/d2b5e48f79e8" target="_blank" class="city">
+          <img decoding="async" src="/assets/barcelonaNuevo-CjkEuA0y.png" alt="Barcelona" />
+        </a>
+        <img src="/assets/new-brUqw31y.png" alt="Nueva fecha" class="info-tickets" />
+      </div>
+
+      <div class="city-row right">
+        <a href="https://link.dice.fm/x3674ede6542" target="_blank" class="city">
+          <img decoding="async" src="/assets/barcelona-IC6uhOoA.webp" alt="Barcelona" />
+        </a>
+        <img src="/assets/sold-DSlmkl_H.png" alt="Sold out" class="info-tickets" />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <img src="/assets/mvrk-D2pMYooa.webp" alt="mvrk" />
+    </footer>
+
+    <!-- iPod MINI (foto con pantalla de VÍDEO) -->
+    <div class="ipod-photo" aria-label="iPod mini">
+      <div class="overlay">
+        <div class="ipod-screen">
+          <video id="ipodVideo" playsinline preload="metadata"
+                 style="width:100%;height:100%;object-fit:cover;border-radius:4px;background:#000;"></video>
+          <div>
+            <div class="ipod-title"  id="ipodTitle"></div>
+            <div class="ipod-artist" id="ipodArtist"></div>
+          </div>
+        </div>
+        <!-- Hotzones invisibles encima de los iconos REALES de la foto -->
+        <div class="ipod-wheel" id="ipodWheel">
+          <button class="ipod-hotzone prev" id="btnPrev" aria-label="Anterior" title="Anterior"></button>
+          <button class="ipod-hotzone next" id="btnNext" aria-label="Siguiente" title="Siguiente"></button>
+          <button class="ipod-hotzone play" id="btnPlay" aria-label="Play/Pause" title="Play/Pause"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script: wiggle at-top + iPod -->
+    <script>
+      /* Toggle clase at-top (si la usas) */
+      (function(){
+        const TOGGLE_CLASS = 'at-top';
+        const updateTopClass = () => {
+          if (window.scrollY <= 2) document.documentElement.classList.add(TOGGLE_CLASS);
+          else document.documentElement.classList.remove(TOGGLE_CLASS);
+        };
+        window.addEventListener('load', updateTopClass, { passive:true });
+        window.addEventListener('scroll', updateTopClass, { passive:true });
+        window.addEventListener('touchmove', updateTopClass, { passive:true });
+        window.addEventListener('resize', updateTopClass);
+      })();
+
+      /* ===== Playlist de vídeos del iPod (actualizada) ===== */
+      const VIDEOS = [
+        { src:"/assets/videos/nostoi.mp4" },
+        { src:"/assets/videos/blow%20ne.mp4" },
+        { src:"/assets/videos/callaito.mp4" },
+        { src:"/assets/videos/jim.mp4" },
+        { src:"/assets/videos/keef.mp4" },
+        { src:"/assets/videos/marlo.mp4" },
+        { src:"/assets/videos/moneyspread.mp4" },
+        { src:"/assets/videos/360.mp4" },
+        { src:"/assets/videos/perrabb.mp4" },
+        { src:"/assets/videos/sonrie.mp4" },
+        { src:"/assets/videos/teniafe.mp4" },
+        { src:"/assets/videos/toymb.mp4" },
+        { src:"/assets/videos/yeat.mp4" }
+      ];
+
+      // iPod video player (prev/next + play/pause) con NEXT aleatorio y STOP por doble click
+      (function(){
+        /* no ejecutar el iPod en móvil (deja escritorio intacto) */
+        if (window.matchMedia && window.matchMedia('(max-width:768px)').matches) return;
+
+        const video = document.getElementById('ipodVideo');
+        const ui = {
+          title : document.getElementById('ipodTitle'),
+          artist: document.getElementById('ipodArtist'),
+          prev  : document.getElementById('btnPrev'),
+          next  : document.getElementById('btnNext'),
+          play  : document.getElementById('btnPlay'),
+          wheel : document.getElementById('ipodWheel')
+        };
+
+        let i = 0, interacted = false;
+
+        /* Ajuste exacto de relación: pantalla = relación del vídeo */
+        const ipodScreen = document.querySelector('.ipod-screen');
+        video.addEventListener('loadedmetadata', ()=>{
+          const w = video.videoWidth || 4;
+          const h = video.videoHeight || 3;
+          ipodScreen.style.aspectRatio = `${w} / ${h}`;
+        });
+
+        /* ALEATORIO (NEXT) + HISTORIAL (PREV) */
+        let history = [];
+        let bag = [];
+        function shuffle(a){
+          for (let j=a.length-1; j>0; j--){
+            const k = Math.floor(Math.random()*(j+1));
+            [a[j], a[k]] = [a[k], a[j]];
+          }
+          return a;
+        }
+        function refillBag(excludeIndex){
+          const candidates = [...Array(VIDEOS.length).keys()].filter(idx => idx !== excludeIndex);
+          bag = shuffle(candidates);
+        }
+
+        function loadVideo(index, autoplay=false){
+          i = (index + VIDEOS.length) % VIDEOS.length;
+          const v = VIDEOS[i];
+          ui.title.textContent  = v.title  || '';
+          ui.artist.textContent = v.artist || '';
+          video.src = v.src;
+          if (v.poster) video.setAttribute('poster', v.poster); else video.removeAttribute('poster');
+          if (autoplay) { video.play().catch(()=>{}); }
+        }
+
+        function next(){
+          if (!bag.length) refillBag(i);
+          history.push(i);
+          const ni = bag.shift();
+          loadVideo(ni, true);
+        }
+        function prev(){
+          if (history.length){
+            const ni = history.pop();
+            loadVideo(ni, true);
+          } else {
+            loadVideo(i-1, true);
+          }
+        }
+
+        async function togglePlay(){
+          try{
+            if (video.paused) {
+              video.muted = false;
+              await video.play();
+              interacted = true;
+            } else {
+              video.pause();
+            }
+          }catch(e){}
+        }
+
+        function stopPlayback(){
+          try{ video.pause(); video.currentTime = 0; }catch(e){}
+        }
+
+        // Enlaces de botones
+        ui.prev.addEventListener('click', prev);
+        ui.next.addEventListener('click', next);
+        ui.play.addEventListener('click', togglePlay);
+        ui.play.addEventListener('dblclick', (e)=>{ e.preventDefault(); stopPlayback(); });
+
+        // Auto-next
+        video.addEventListener('ended', next);
+
+        // Flechas de teclado (tras la 1ª reproducción)
+        let keyboardEnabled = false;
+        document.addEventListener('keydown', function(e){
+          if (!keyboardEnabled) return;
+          const t = e.target;
+          if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+          if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+          else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+        });
+
+        // Primer gesto: habilitar sonido y teclado
+        [ui.prev, ui.next, ui.play, ui.wheel, video].forEach(el=>{
+          el.addEventListener('click', async ()=>{
+            if (!interacted){
+              try{
+                video.muted = false;
+                await video.play();
+                interacted = true;
+                keyboardEnabled = true;
+              }catch(_){}
+            }
+          }, { once:true });
+        });
+
+        // Gesto circular (opcional)
+        let dragging=false, lastA=null, accum=0;
+        const STEP=70;
+        function angle(e){
+          const r=ui.wheel.getBoundingClientRect();
+          const cx=r.left+r.width/2, cy=r.top+r.height/2;
+          const p=e.touches?e.touches[0]:e;
+          return Math.atan2(p.clientY-cy, p.clientX-cx)*180/Math.PI;
+        }
+        function start(e){ dragging=true; lastA=angle(e); e.preventDefault(); }
+        function move(e){
+          if(!dragging) return;
+          let a=angle(e), d=a-lastA; if(d>180) d-=360; if(d<-180) d+=360; lastA=a;
+          accum+=d; if(accum>=STEP){ next(); accum=0; } if(accum<=-STEP){ prev(); accum=0; }
+        }
+        function end(){ dragging=false; accum=0; }
+        ui.wheel.addEventListener('pointerdown',start);
+        addEventListener('pointermove',move);
+        addEventListener('pointerup',end);
+        ui.wheel.addEventListener('touchstart',start,{passive:false});
+        addEventListener('touchmove',move,{passive:false});
+        addEventListener('touchend',end);
+
+        // Microinteracciones desktop
+        (function(){
+          const isDesktop = matchMedia('(hover:hover) and (pointer:fine)').matches;
+          if(!isDesktop) return;
+          function wireButton(el){
+            if(!el) return;
+            let pressed=false;
+            el.addEventListener('pointerdown', e=>{ e.preventDefault(); pressed=true; el.classList.add('is-pressing'); });
+            el.addEventListener('pointerup',   ()=>{ if(!pressed) return; pressed=false; el.classList.remove('is-pressing'); el.classList.add('pop'); setTimeout(()=>el.classList.remove('pop'), 200); });
+            el.addEventListener('pointerleave',()=>{ pressed=false; el.classList.remove('is-pressing'); });
+            el.addEventListener('pointercancel',()=>{ pressed=false; el.classList.remove('is-pressing'); });
+          }
+          wireButton(ui.prev); wireButton(ui.next); wireButton(ui.play);
+        })();
+
+        // Carga inicial + bolsa aleatoria
+        loadVideo(0, false);
+        refillBag(0);
+      })();
+    </script>
+  </body>
+</html>
