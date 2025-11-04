@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" href="/assets/logo-C-sEIKdg.webp" />
-  <link rel="preload" as="style" href="#" onload="this.rel='stylesheet'"><noscript></noscript>
-<link href="./stylecatalogo.css" rel="stylesheet" />
-
-
-  <!-- ===== Base ===== -->
- 
+  <link href="./stylecatalogo.css" rel="stylesheet" />
 </head>
+
 <body>
   <!-- FONDO -->
   <canvas id="bg" aria-hidden="true"></canvas>
@@ -28,7 +24,7 @@
     <section id="collage" class="collage" aria-label="Prendas en collage"></section>
   </main>
 
-  <!-- Drawer lateral (hover-only) -->
+  <!-- Drawer lateral música -->
   <aside class="music-drawer" id="musicDrawer">
     <button class="music-drawer__trigger" id="musicTrigger"
             aria-controls="musicPanel" aria-expanded="false" aria-label="Abrir reproductor">
@@ -69,10 +65,14 @@
         <!-- Galería / Carrusel -->
         <div class="pb-prod-gallery">
           <div class="pb-prod-carousel-frame">
-            <button class="pb-carousel-arrow pb-carousel-arrow--prev" id="pbCarouselPrev" aria-label="Anterior">‹</button>
-            <button class="pb-carousel-arrow pb-carousel-arrow--next" id="pbCarouselNext" aria-label="Siguiente">›</button>
+            <button class="pb-carousel-arrow pb-carousel-arrow--prev" id="pbCarouselPrev" aria-label="Anterior">
+              <img class="flechacarrusel" src="../public/icon/flechaizquierda.png" alt="">
+            </button>
+            <img id="pbCarouselImage" class="pb-prod-carousel-image" alt="Producto" />
+            <button class="pb-carousel-arrow pb-carousel-arrow--next" id="pbCarouselNext" aria-label="Siguiente">
+              <img class="flechacarrusel" src="../public/icon/flechaderecha.png" alt="">
+            </button>
           </div>
-          <!-- (miniaturas eliminadas) -->
         </div>
 
         <!-- Detalles / Comprar -->
@@ -82,13 +82,23 @@
             <div class="pb-prod-price" id="pbProdPrice"></div>
           </div>
 
+          <!-- Colores -->
           <div class="pb-prod-colors-block">
             <div class="pb-prod-label">Color</div>
             <div class="pb-color-row" id="pbColorRow">
-              <!-- pills dinámicas -->
+              <!-- pills dinámicas de color -->
             </div>
           </div>
 
+          <!-- Tallas -->
+          <div class="pb-prod-sizes-block">
+            <div class="pb-prod-label">Talla</div>
+            <div class="pb-sizes-row" id="pbSizeRow">
+              <!-- pills dinámicas de talla -->
+            </div>
+          </div>
+
+          <!-- Cantidad + ATC -->
           <div class="pb-purchase-row">
             <div class="pb-qty-box" id="pbQtyBox">
               <button class="pb-qty-btn" data-delta="-1">−</button>
@@ -98,6 +108,7 @@
             <button class="pb-atc-btn" id="pbATCBtn" disabled>Agotado</button>
           </div>
 
+          <!-- Descripción -->
           <div class="pb-prod-desc" id="pbProdDesc"></div>
         </div>
       </section>
@@ -115,9 +126,6 @@
   </div>
   <!-- ===== /PRODUCT MODAL ===== -->
 
-  <!-- ===== JS del fondo + collage ===== -->
- 
-
   <!-- ===== FOOTER ===== -->
   <footer class="pb-footer-split-wrap" role="contentinfo" aria-label="Footer">
     <div class="pb-footer-split">
@@ -131,7 +139,10 @@
 
         <!-- Instagram + Copyright derecha -->
         <div class="pb-footer-ig-col">
-          <a class="pb-footer-ig" href="https://www.instagram.com/mvrkx1?igsh=MXB5bmIxdmRma3FzNA==" target="_blank" rel="noopener" aria-label="Instagram MVRK">
+          <a class="pb-footer-ig"
+             href="https://www.instagram.com/mvrkx1?igsh=MXB5bmIxdmRma3FzNA=="
+             target="_blank" rel="noopener"
+             aria-label="Instagram MVRK">
             <svg class="pb-footer-ig__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="2"/>
               <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
@@ -143,6 +154,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Barra fija de iconos arriba-derecha -->
+  <div class="pb-top-icons" aria-label="Acciones rápidas">
+    <a href="/account" class="pb-top-icon" title="Cuenta">
+      <img src="../public/icon/user.png" alt="Cuenta">
+    </a>
+    <a href="/search" class="pb-top-icon" title="Buscar">
+      <img src="../public/icon/lupa.png" alt="Buscar">
+    </a>
+    <a href="/cart" class="pb-top-icon pb-cart-trigger" title="Carrito">
+      <img src="../public/icon/carrito.png" alt="Carrito">
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./javacatalogo.js"></script>
+  <script src="./shopify-integration.js"></script>
 </body>
-<script src="./javacatalogo.js" ></script>
 </html>
